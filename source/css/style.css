@@ -297,9 +297,6 @@ nav > ul {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 1rem;
-  /*   > * {
-      flex: 1 1 10rem;
-    } */
 }
 
 nav > ul > li {
@@ -803,10 +800,6 @@ main {
 }
 .woocommerce-pagination > ul {
   flex-wrap: nowrap;
-  /*     > li > .next,
-      > li > .previous {
-        // needs something
-      } */
 }
 .woocommerce-pagination > ul > li > .current {
   display: block;
