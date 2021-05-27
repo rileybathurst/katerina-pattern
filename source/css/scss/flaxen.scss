@@ -35,11 +35,6 @@ p {
   padding-right: 0;
 }
 
-// Hack as top bar width was pulling across
-.top-bar {
-  display: inherit;
-}
-
 // Used across sites // 🚨 is this start or end of the section
 
 // I think this can all be done with grid place items center
@@ -184,27 +179,6 @@ button,
   margin: 0;
 }
 
-// menu
-/* .menu {
-	font-family: $header-font-family;
-} */
-
-/* .menu a {
-	color: $body-font-color;
-} */
-
-.page-numbers {
-  display: inline-block !important;
-  background-color: transparent;
-  color: $primary-color !important;
-}
-
-// hack for the buttons other than the numbers in pagination
-.prev,
-.next {
-  padding: 0 !important;
-}
-
 .current {
   border-radius: $global-radius;
 }
@@ -294,10 +268,11 @@ button,
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
 }
 
+// I think this might have been trying to match the search box but it's doing a bad job
 header .button {
   // overirde defaults
   font-size: 0.9rem !important;
-  padding: 0.85em 1em !important;
+  padding: 0.75em 1em;
   font-weight: normal !important;
   border-radius: 4px !important;
   color: $primary-color !important;
@@ -994,7 +969,7 @@ dl {
 \*------------------------------------*/
 
 #payments {
-  display: flex;
+ /*  display: flex;
   max-width: 20rem;
   margin-left: auto;
   margin-right: auto;
@@ -1003,7 +978,7 @@ dl {
   gap: 1rem;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 2rem;
+  margin-bottom: 2rem; */
 
   img,
   svg {
@@ -1088,40 +1063,6 @@ dl {
 
 // so much of this is just build to get something working
 // then delete everything I don't need or document it
-
-.products {
-  display: flex !important;
-  gap: 1rem !important;
-  flex-wrap: wrap !important;
-  justify-content: space-between !important;
-  aspect-ratio: 2/3 !important;
-  width: 100% !important;
-  height: 100% !important;
-
-  > .product {
-    // li
-    flex: 1 1 18rem !important; // guess and check
-    margin: 0 !important;
-    // aspect-ratio: 2 / 3; // I dont think this is working right
-    display: block;
-    width: auto !important;
-    height: min-content;
-
-    * {
-      // theres some really messy stuff in here
-      // not letting the footer drop down
-      display: block;
-
-      > .card-image {
-        width: 100%;
-      }
-
-      > .card-section {
-        padding: 1rem !important;
-      }
-    }
-  }
-}
 
 .woocommerce-Price-currencySymbol {
   display: inline !important;

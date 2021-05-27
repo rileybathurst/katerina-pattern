@@ -7,8 +7,8 @@
  * 1) Completely remove from the flow and screen readers.
  */
 .u-is-hidden {
-    display: none !important;
-    visibility: hidden !important;
+  display: none !important;
+  visibility: hidden !important;
 }
 
 /**
@@ -16,11 +16,31 @@
  * 1) Completely remove from the flow but leave available to screen readers.
  */
 .u-is-vishidden {
-    position: absolute !important;
-    overflow: hidden;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    border: 0;
-    clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+/*------------------------------------*\
+    #katerina
+\*------------------------------------*/
+
+// this might be straight from wordpress
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  overflow-wrap: normal !important;
+  word-wrap: normal !important;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
 }

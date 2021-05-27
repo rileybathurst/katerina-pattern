@@ -8,9 +8,197 @@
  *    to achieve a comfortable line length
  */
 .l-linelength-container {
-	max-width: $l-linelength-width;
+  max-width: $l-linelength-width;
 }
 
 /*------------------------------------*\
     #GRID
 \*------------------------------------*/
+
+/*------------------------------------*\
+    #katerina
+\*------------------------------------*/
+
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem;
+  justify-content: space-between;
+
+  a {
+    border-radius: 4px;
+    padding: 0.5rem;
+  }
+
+  a:hover {
+    background: $medium-gray;
+  }
+}
+
+main {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  // padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  padding-block-start: 0.5rem;
+  padding-block-end: 0.5rem;
+  align-items: center;
+
+  /*     > * {
+        flex: 1 1 20rem;
+    } */
+
+  > h3 {
+    justify-self: center;
+    // text-align: center;
+    flex: 2 1 20rem;
+  }
+
+  a {
+    border-radius: 4px;
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+    padding-block-start: 0.5rem;
+    padding-block-end: 0.5rem;
+  }
+
+  a:hover {
+    background: $light-gray;
+  }
+
+  > .search-sale {
+    justify-self: flex-end;
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 1rem;
+    flex: 1 1 20rem;
+  }
+}
+
+#footer-nav {
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+}
+
+#copyright {
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+
+  a {
+    color: $black;
+  }
+
+  a:hover {
+    color: black;
+  }
+}
+
+.floor {
+  background: $medium-gray;
+  padding-bottom: 3rem;
+
+  a:hover {
+    background: $dark-gray;
+  }
+}
+
+.featured {
+  display: grid;
+  place-items: center;
+
+  > * {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  > img {
+    width: 100%;
+  }
+
+  a {
+    border-radius: 4px;
+    padding-inline-start: 1rem;
+    padding-inline-end: 1rem;
+    padding-block-start: 0.5rem;
+    padding-block-end: 0.5rem;
+    background: rgba(55, 55, 55, 0.9);
+  }
+
+  a:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.products {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  
+  > .product {
+    flex: 1 1 18rem; // guess and check
+    // margin: 0;
+    // display: block;
+    // width: auto;
+    border: 1px solid $light-gray;
+
+    * {
+      // theres some really messy stuff in here
+      // not letting the footer drop down
+      display: block;
+
+      > .card-image, // pattern lab testing needs both names
+      > .card-image img {
+        width: 100%;
+        aspect-ratio: 2 / 3; // getting more support
+      }
+
+      > .card-section {
+        padding: 1rem;
+
+        > p {
+          text-align: start; // dont justify
+        }
+      }
+    }
+  }
+}
+
+.woocommerce-pagination {
+  width: max-content;
+  margin: 0 auto;
+
+  > ul {
+    flex-wrap: nowrap;
+
+    // match the links
+    > li > .current {
+      display: block;
+      border-radius: 4px;
+      padding-inline-start: 1rem;
+      padding-inline-end: 1rem;
+      padding-block-start: 0.5rem;
+      padding-block-end: 0.5rem;
+    }
+
+/*     > li > .next,
+    > li > .previous {
+      // needs something
+    } */
+  }
+}

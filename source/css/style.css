@@ -235,24 +235,6 @@ body {
 /*------------------------------------*\
   #katerina
 \*------------------------------------*/
-.top-bar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem;
-}
-@media (min-width: 40rem) {
-  .top-bar {
-    flex-wrap: nowrap;
-  }
-}
-
-.top-bar,
-.top-bar ul {
-  background-color: #e6e6e6;
-}
-
 .grid-container {
   max-width: 75rem;
   margin-left: auto;
@@ -309,22 +291,43 @@ ul {
 nav > ul {
   width: 100%;
   max-width: 75rem;
-  padding: 0;
-  margin: 0;
+  padding: 1rem;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-nav > ul > * {
-  flex: 1 1 10rem;
+  gap: 1rem;
+  /*   > * {
+      flex: 1 1 10rem;
+    } */
 }
 
-.nav > ul > li {
+nav > ul > li {
+  flex: 0 1 10rem;
   text-align: center;
+}
+
+nav > ul > li > a {
+  display: block;
   border-radius: 4px;
-  padding: 0.7rem 1rem;
-  line-height: 1;
-  text-decoration: none;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  padding-block-start: 0.5rem;
+  padding-block-end: 0.5rem;
+}
+
+nav > ul > li > a:hover {
+  background-color: #cacaca;
+}
+
+/*------------------------------------*\
+  #footer
+\*------------------------------------*/
+footer nav > ul {
+  justify-content: center;
+  width: max-content;
+  margin: 0 auto;
+  flex-wrap: nowrap;
 }
 
 /*------------------------------------*\
@@ -658,6 +661,163 @@ tr {
     #GRID
 \*------------------------------------*/
 /*------------------------------------*\
+    #katerina
+\*------------------------------------*/
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem;
+  justify-content: space-between;
+}
+.top-bar a {
+  border-radius: 4px;
+  padding: 0.5rem;
+}
+.top-bar a:hover {
+  background: #cacaca;
+}
+
+main {
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 75rem;
+  margin: 0 auto;
+  padding-inline-end: 1rem;
+  padding-block-start: 0.5rem;
+  padding-block-end: 0.5rem;
+  align-items: center;
+  /*     > * {
+        flex: 1 1 20rem;
+    } */
+}
+.hero > h3 {
+  justify-self: center;
+  flex: 2 1 20rem;
+}
+.hero a {
+  border-radius: 4px;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  padding-block-start: 0.5rem;
+  padding-block-end: 0.5rem;
+}
+.hero a:hover {
+  background: #e6e6e6;
+}
+.hero > .search-sale {
+  justify-self: flex-end;
+  align-self: flex-end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 1rem;
+  flex: 1 1 20rem;
+}
+
+#footer-nav {
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+}
+
+#copyright {
+  padding-block-start: 1rem;
+  padding-block-end: 1rem;
+}
+#copyright a {
+  color: #0a0a0a;
+}
+#copyright a:hover {
+  color: black;
+}
+
+.floor {
+  background: #cacaca;
+  padding-bottom: 3rem;
+}
+.floor a:hover {
+  background: #8a8a8a;
+}
+
+.featured {
+  display: grid;
+  place-items: center;
+}
+.featured > * {
+  grid-row: 1;
+  grid-column: 1;
+}
+.featured > img {
+  width: 100%;
+}
+.featured a {
+  border-radius: 4px;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  padding-block-start: 0.5rem;
+  padding-block-end: 0.5rem;
+  background: rgba(55, 55, 55, 0.9);
+}
+.featured a:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.products {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.products > .product {
+  flex: 1 1 18rem;
+  border: 1px solid #e6e6e6;
+}
+.products > .product * {
+  display: block;
+}
+.products > .product * > .card-image,
+.products > .product * > .card-image img {
+  width: 100%;
+  aspect-ratio: 2/3;
+}
+.products > .product * > .card-section {
+  padding: 1rem;
+}
+.products > .product * > .card-section > p {
+  text-align: start;
+}
+
+.woocommerce-pagination {
+  width: max-content;
+  margin: 0 auto;
+}
+.woocommerce-pagination > ul {
+  flex-wrap: nowrap;
+  /*     > li > .next,
+      > li > .previous {
+        // needs something
+      } */
+}
+.woocommerce-pagination > ul > li > .current {
+  display: block;
+  border-radius: 4px;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  padding-block-start: 0.5rem;
+  padding-block-end: 0.5rem;
+}
+
+/*------------------------------------*\
     #UTILITIES
 \*------------------------------------*/
 /*------------------------------------*\
@@ -684,6 +844,24 @@ tr {
   padding: 0;
   border: 0;
   clip: rect(1px, 1px, 1px, 1px);
+}
+
+/*------------------------------------*\
+    #katerina
+\*------------------------------------*/
+.screen-reader-text {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  overflow-wrap: normal !important;
+  word-wrap: normal !important;
+  padding: 0;
+  position: absolute !important;
+  width: 1px;
 }
 
 /*------------------------------------*\
@@ -1021,10 +1199,6 @@ p {
   padding-right: 0;
 }
 
-.top-bar {
-  display: inherit;
-}
-
 .flex {
   display: flex;
   flex-direction: column;
@@ -1154,23 +1328,6 @@ button,
   margin: 0;
 }
 
-/* .menu {
-	font-family: $header-font-family;
-} */
-/* .menu a {
-	color: $body-font-color;
-} */
-.page-numbers {
-  display: inline-block !important;
-  background-color: transparent;
-  color: #9b5f61 !important;
-}
-
-.prev,
-.next {
-  padding: 0 !important;
-}
-
 .current {
   border-radius: 0;
 }
@@ -1260,7 +1417,7 @@ button,
 
 header .button {
   font-size: 0.9rem !important;
-  padding: 0.85em 1em !important;
+  padding: 0.75em 1em;
   font-weight: normal !important;
   border-radius: 4px !important;
   color: #9b5f61 !important;
@@ -2058,16 +2215,16 @@ dl {
 	#I think this is where I went back to editing
 \*------------------------------------*/
 #payments {
-  display: flex;
-  max-width: 20rem;
-  margin-left: auto;
-  margin-right: auto;
-  padding-right: 0.9375rem;
-  padding-left: 0.9375rem;
-  gap: 1rem;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 2rem;
+  /*  display: flex;
+   max-width: 20rem;
+   margin-left: auto;
+   margin-right: auto;
+   padding-right: 0.9375rem;
+   padding-left: 0.9375rem;
+   gap: 1rem;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 2rem; */
 }
 #payments img,
 #payments svg {
@@ -2147,32 +2304,6 @@ dl {
 	position: reset;
 	height: auto;
 } */
-.products {
-  display: flex !important;
-  gap: 1rem !important;
-  flex-wrap: wrap !important;
-  justify-content: space-between !important;
-  aspect-ratio: 2/3 !important;
-  width: 100% !important;
-  height: 100% !important;
-}
-.products > .product {
-  flex: 1 1 18rem !important;
-  margin: 0 !important;
-  display: block;
-  width: auto !important;
-  height: min-content;
-}
-.products > .product * {
-  display: block;
-}
-.products > .product * > .card-image {
-  width: 100%;
-}
-.products > .product * > .card-section {
-  padding: 1rem !important;
-}
-
 .woocommerce-Price-currencySymbol {
   display: inline !important;
 }

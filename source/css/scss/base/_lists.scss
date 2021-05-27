@@ -21,22 +21,49 @@ ul {
 nav > ul {
   width: 100%;
   max-width: 75rem;
-  padding: 0;
-  margin: 0;
+  padding: 1rem;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   // flex-direction: row;
   justify-content: space-between;
+  gap: 1rem;
 
-  > * {
+/*   > * {
     flex: 1 1 10rem;
-  }
+  } */
 }
 
-.nav > ul > li {
+nav > ul > li {
+  flex: 0 1 10rem;
   text-align: center;
+}
+
+nav > ul > li > a {
+  display: block;
   border-radius: 4px;
-  padding: 0.7rem 1rem;
-  line-height: 1;
-  text-decoration: none;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
+  padding-block-start: 0.5rem;
+  padding-block-end: 0.5rem;
+}
+
+nav > ul > li > a:hover {
+  background-color: $medium-gray;
+}
+
+
+/*------------------------------------*\
+  #footer
+\*------------------------------------*/
+footer nav > ul {
+  justify-content: center;
+  width: max-content;
+  margin: 0 auto;
+  flex-wrap: nowrap;
+}
+
+footer nav > ul > * {
+  // width: max-content;
+
 }
