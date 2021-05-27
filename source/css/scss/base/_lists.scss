@@ -1,0 +1,42 @@
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+
+/**
+ * 1) List base styles
+ */
+
+/**
+  * Remove list styles from unordered and ordered lists
+  */
+ol,
+ul {
+  list-style: none;
+}
+
+/*------------------------------------*\
+    #katerina
+\*------------------------------------*/
+
+nav > ul {
+  width: 100%;
+  max-width: 75rem;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  // flex-direction: row;
+  justify-content: space-between;
+
+  > * {
+    flex: 1 1 10rem;
+  }
+}
+
+.nav > ul > li {
+  text-align: center;
+  border-radius: 4px;
+  padding: 0.7rem 1rem;
+  line-height: 1;
+  text-decoration: none;
+}

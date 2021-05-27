@@ -1,0 +1,75 @@
+/*------------------------------------*\
+    #BODY
+\*------------------------------------*/
+
+/**
+ * HTML base styles
+ * 1) Set the html element's height to at least 100% of the viewport.
+ *    This is used to achieve a sticky footer
+ */
+html {
+  min-height: 100vh; /* 1 */
+}
+
+/**
+ * Body base styles
+ * 1) Set the body element's height to at least 100% of the viewport.
+ *    This is used to achieve a sticky footer
+ */
+body {
+  min-height: 100vh; /* 1 */
+  font-family: $font-family-primary;
+  @include typographyBody();
+  background-color: $color-body-bg;
+  color: $color-body-text;
+}
+
+// Below the footer background color
+body {
+  background: $medium-gray;
+  margin: 0;
+  padding: 0;
+  background: $white;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif; // this needs some checks should have system
+  font-weight: normal;
+  line-height: 1.5;
+  color: $black;
+  // -webkit-font-smoothing:antialiased;
+  // -moz-osx-font-smoothing:grayscale
+  font-family: $body-font-family;
+  font-weight: $global-weight-normal;
+}
+
+/*------------------------------------*\
+  #katerina
+\*------------------------------------*/
+
+.top-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+
+  @media (min-width: 40rem) {
+    flex-wrap: nowrap;
+  }
+}
+
+.top-bar,
+.top-bar ul {
+  background-color: #e6e6e6;
+}
+
+.grid-container {
+  max-width: 75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 0.625rem;
+  padding-left: 0.625rem;
+
+  @media (min-width: 40rem) {
+    padding-right: 0.9375rem;
+    padding-left: 0.9375rem;
+  }
+}
